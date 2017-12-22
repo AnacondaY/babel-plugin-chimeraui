@@ -1,0 +1,27 @@
+{
+  "name": "babel-plugin-chimeraui",
+  "version": "0.0.1",
+  "description": "The babel plugin for simplifying modules import of chimera-ui.",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "import",
+    "chimera",
+    "ui"
+  ],
+  "author": "AnacondaY",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.3",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.0.3"
+  }
+}
