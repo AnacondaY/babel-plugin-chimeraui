@@ -1,13 +1,25 @@
+sudo: false
 language: node_js
 node_js:
-- '7.6.0'
+  - "7.6.0"
 cache:
   yarn: true
+  directories:
   - node_modules
-install:
+cache:
+  directories: node_modules
+install: 
   - yarn install
-script:
-  - yarn test
+script: 
+  - yarn test 
   - yarn coverage
+before_deploy: 
+  - yarn build
+deploy:
+  provider: npm
+  email: oliver_young@qq.com
+  skip_cleanup: true
+  api_key:
+    secure: dcprN7smpAyBu07NKTmCN80yk+3zrnfKA67xzchslHt1r0TVyczFE+X88Wtj3m8hSZ2i8bElqaWxG4aPUKMKwkkJAkf2rGBcGs1Vtr3p0wxQcC+onzPD6/2vgWsAq3GCigcIt707O38endZh1ZH9BT4WbOxntg1ZNi53ozOr1yRpiuyZtTEL1qOotXyPXFs+6F7c+zipEIvYTGgAgmseieLX3pe0pB7c9NXo+ufLoXf+27RM6tRHv12Nb/zHp1lZ+Kmvxb7vTkgy2S85TLdX+/rjJuG7HBVne0mRZaw+B3Ddq90fB0pqjrdpCqFNXHkrqmyLaeYTJefKxaOSWPwcvb+Er37t9L0hljQSyAB+Kxx9MTPmp54WM51j+96+cw7952rI+NamW8DJMygvNp/3lU+9ypA5HSNzH8AsExicAT2E7uWQ5bwrNMkb8LrEft+uVjBAGuR7AB85y6t4e8OKoJ57fiGivWrn4fU1PzKgZRHgdt8OCNHLcejR75nsu/yPob4fGLbrUuikkSByvcTjybtJiu6f4Ye1lkJovHpTWQp+0ureOGYdNgs6mjaOAjllnSTSK0pCjcWvUncmy13s1ZNOZH4EoLMato9gvj4Q4hob8ejuGAB8ehTwpdiFlLl8XTyXIa0pSNuRchQPKhSoYbUojeBAQY3/TFXLKeCydDw=
   on:
     tags: true
