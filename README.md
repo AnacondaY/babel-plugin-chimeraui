@@ -1,5 +1,7 @@
 # babel-plugin-chimeraui
 
+[![Build Status](https://travis-ci.org/AnacondaY/babel-plugin-chimeraui.svg?branch=master)](https://travis-ci.org/AnacondaY/babel-plugin-chimeraui)
+
 为chimera-ui定制的组件模块导入插件, 可实现组件模块按需加载。
 
 ## 安装
