@@ -28,7 +28,7 @@ export default function plugin({ types: t }){
     
                         if(t.isImportSpecifier(sp)){
                             const name = sp.imported.name;
-                            const targetDir = `${libName}/${libDirectory}/${name}`; 
+                            const targetDir = `${libName}/${libDirectory}/components/${name}`; 
                             const cssFile = `${targetDir}/style/css/index.css`;
                             const scssFile = `${targetDir}/style/index.scss`;
                             declarations.push(
